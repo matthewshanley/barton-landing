@@ -113,7 +113,7 @@
   .hero-arrow{
     position:relative;
     z-index:2;
-    margin-top:2.5rem;
+    margin-top:2rem;
     width:22px;
     height:22px;
     border-right:2px solid var(--gold);
@@ -121,6 +121,39 @@
     transform:rotate(45deg);
     animation:bob 2.2s ease-in-out infinite;
   }
+  .hero-signup-card{
+    position:relative;
+    z-index:2;
+    background:var(--white);
+    border-radius:4px;
+    padding:1.75rem 2rem;
+    margin-top:2.25rem;
+    width:100%;
+    max-width:440px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.35);
+    border-top:4px solid var(--gold);
+  }
+  .hero-signup-label{
+    font-size:0.82rem;
+    font-weight:600;
+    color:var(--navy-mid);
+    margin-bottom:1rem;
+  }
+  .hero-signup-card .signup-form{margin-top:0;}
+  .hero-signup-card .signup-msg{margin-top:0.6rem;}
+  .hero-signup-card .signup-form input[type="email"]{
+    border:1px solid var(--paleblue);
+    background:var(--white);
+    color:var(--ink);
+  }
+  .hero-signup-card .signup-form input[type="email"]::placeholder{color:#8A97A0;}
+  .hero-signup-card .signup-form input[type="email"]:focus{
+    outline:2px solid var(--gold);
+    outline-offset:1px;
+    background:var(--white);
+  }
+  .hero-signup-card .signup-msg.ok{color:var(--sage);}
+  .hero-signup-card .signup-msg.err{color:#B23A2C;}
   @keyframes bob{
     0%,100%{transform:rotate(45deg) translate(0,0);}
     50%{transform:rotate(45deg) translate(4px,4px);}
@@ -365,7 +398,17 @@
 
   <img class="hero-logo-main" src="nbhd-logo-vector-white.svg" alt="The Neighborhood Hotel"/>
   <h1>Where thoughtful design meets genuine comfort — coming to 115 N Barton Street.</h1>
-  <p class="hero-sub">A second Neighborhood Hotel is coming to New Buffalo, just around the corner from our original inn. Scroll for a first look.</p>
+  <p class="hero-sub">A second Neighborhood Hotel is coming to New Buffalo, just around the corner from our original inn.</p>
+
+  <div class="hero-signup-card">
+    <p class="hero-signup-label upper">Follow along as we build</p>
+    <form class="signup-form" id="signupForm">
+      <input type="email" id="emailInput" placeholder="you@email.com" required autocomplete="email"/>
+      <button type="submit" id="signupBtn" class="upper">Keep Me Posted</button>
+    </form>
+    <div class="signup-msg" id="signupMsg"></div>
+  </div>
+
   <div class="hero-arrow"></div>
 </div>
 
@@ -422,13 +465,8 @@
 
 <div class="signup">
   <div class="signup-inner">
-    <h2>Follow along as we build.</h2>
-    <p>Occasional updates: construction milestones, design previews, and news on when to book your first stay.</p>
-    <form class="signup-form" id="signupForm">
-      <input type="email" id="emailInput" placeholder="you@email.com" required autocomplete="email"/>
-      <button type="submit" id="signupBtn" class="upper">Keep Me Posted</button>
-    </form>
-    <div class="signup-msg" id="signupMsg"></div>
+    <h2>See you this fall.</h2>
+    <p>Scroll back up to leave your email, and we'll keep you posted as we build.</p>
   </div>
 </div>
 
@@ -440,8 +478,8 @@
   // ---- Supabase config ----
   // Same project URL + anon public key already used in the 115-N-Barton
   // internal site's App.js (or a fresh Supabase project).
-  const SUPABASE_URL = "https://bhwfnogroaxttmtvulft.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_E6WAINsjfdTeGs0_xAK6ig_VGIzDI_w";
+  const SUPABASE_URL = "PASTE_YOUR_SUPABASE_URL_HERE";
+  const SUPABASE_ANON_KEY = "PASTE_YOUR_ANON_KEY_HERE";
 
   const form = document.getElementById('signupForm');
   const input = document.getElementById('emailInput');
