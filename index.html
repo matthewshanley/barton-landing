@@ -185,6 +185,38 @@
     max-width:46ch;
   }
 
+  /* ---------- Story band (no image, full-width) ---------- */
+  .story-band{
+    background:var(--sage);
+    padding:clamp(3.5rem, 8vh, 5rem) clamp(1.25rem, 5vw, 3rem);
+  }
+  .story-band-inner{
+    max-width:640px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .story-band .tag{
+    display:inline-block;
+    font-size:0.78rem;
+    font-weight:600;
+    color:var(--white);
+    border-radius:20px;
+    padding:0.3rem 0.9rem;
+    margin-bottom:1.1rem;
+  }
+  .story-band h2{
+    font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem);
+    color:var(--white);
+    line-height:1.25;
+  }
+  .story-band p{
+    font-size:1.02rem;
+    line-height:1.7;
+    color:rgba(255,255,255,0.9);
+    margin-top:1.1rem;
+  }
+
   /* ---------- Facts strip ---------- */
   .facts{
     background:var(--paleblue);
@@ -333,7 +365,7 @@
 
   <img class="hero-logo-main" src="nbhd-logo-vector-white.svg" alt="The Neighborhood Hotel"/>
   <h1>Where thoughtful design meets genuine comfort — coming to 115 N Barton Street.</h1>
-  <p class="hero-sub">A new 21-room boutique hotel, a short walk from the beach, downtown, and the train. Scroll for a first look.</p>
+  <p class="hero-sub">A second Neighborhood Hotel is coming to New Buffalo, just around the corner from our original inn. Scroll for a first look.</p>
   <div class="hero-arrow"></div>
 </div>
 
@@ -343,9 +375,9 @@
       <img src="rendering-1.jpg" alt="Rendering of The Neighborhood Hotel, New Buffalo"/>
     </div>
     <div class="story-text">
-      <div class="tag upper">The Building</div>
-      <h2>Ground-up, built for New Buffalo.</h2>
-      <p>The Neighborhood Hotel is a new construction project designed from scratch for this corner of Barton Street: 21 guest rooms, a lobby built for lingering, and public spaces meant to be used, not just admired.</p>
+      <div class="tag upper">The Announcement</div>
+      <h2>A second Neighborhood Hotel in New Buffalo.</h2>
+      <p>115 Barton is the newest addition to the Neighborhood collection, and our second property in New Buffalo, just around the corner from <a href="https://www.theneighborhoodhotel.com/location/new-buffalo/" style="color:var(--rust); text-decoration:underline;">The Neighborhood Hotel New Buffalo</a>. Together, the two give guests even more room to spread out in the beach town everyone already loves. An opening date isn't set in stone yet, but we're targeting Fall 2027.</p>
     </div>
   </div>
 </section>
@@ -356,10 +388,18 @@
       <img src="rendering-2.jpg" alt="Rendering of The Neighborhood Hotel, New Buffalo"/>
     </div>
     <div class="story-text">
-      <div class="tag upper">The Neighborhood</div>
-      <h2>Part of a small family of places.</h2>
-      <p>We're also behind Lincoln Park and Little Italy in Chicago, and Grand Beach just up the shore. New Buffalo is our next stop: independent, design-forward, and rooted in the neighborhood it's part of.</p>
+      <div class="tag upper">The Story</div>
+      <h2>Summer at Neighborhood Barton.</h2>
+      <p>The design tells of generational visits to our evolving lakeside town, an evolution of campy patterns, quilted fabrics, and pieces that feel modern yet uniquely vintage, as if picked up along the Red Arrow Highway. Inspired by Midwest retreats, family lake houses, and supper clubs, past and present.</p>
     </div>
+  </div>
+</section>
+
+<section class="story-band">
+  <div class="story-band-inner">
+    <div class="tag upper" style="background:rgba(255,255,255,0.12);">The Details</div>
+    <h2>Built for gathering, made to return to.</h2>
+    <p>The lobby icebox is stocked and ready for your favorite sips. Guest room headboards, woven and striped, echo childhood memories of the lake. Twenty-one studio, one-, and two-bedroom suites complement our ten-room inn next door, giving families and groups room to stay awhile, and come back for years to come.</p>
   </div>
 </section>
 
@@ -367,15 +407,15 @@
   <div class="facts-row">
     <div class="fact">
       <h3>21</h3>
-      <p class="upper">Guest Rooms</p>
+      <p class="upper">Studio, 1 &amp; 2-Bedroom Suites</p>
     </div>
     <div class="fact">
       <h3>New Buffalo</h3>
       <p class="upper">Southwest Michigan</p>
     </div>
     <div class="fact">
-      <h3>2027</h3>
-      <p class="upper">Opening</p>
+      <h3>Fall 2027</h3>
+      <p class="upper">Expected Opening</p>
     </div>
   </div>
 </div>
@@ -389,7 +429,6 @@
       <button type="submit" id="signupBtn" class="upper">Keep Me Posted</button>
     </form>
     <div class="signup-msg" id="signupMsg"></div>
-    <p class="signup-note">No spam, just project updates. Unsubscribe anytime.</p>
   </div>
 </div>
 
